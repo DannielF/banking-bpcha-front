@@ -8,9 +8,15 @@ import { AuthModule } from '@auth0/auth0-angular';
 import { environment } from 'src/environments/environment';
 import { SignupButtonComponent } from './shared/signup-button/signup-button.component';
 import { LogoutButtonComponent } from './shared/logout-button/logout-button.component';
+import { LoginButtonComponent } from './shared/login-button/login-button.component';
 
 @NgModule({
-  declarations: [AppComponent, SignupButtonComponent, LogoutButtonComponent],
+  declarations: [
+    AppComponent,
+    SignupButtonComponent,
+    LogoutButtonComponent,
+    LoginButtonComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
