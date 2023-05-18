@@ -9,6 +9,10 @@ import { environment } from 'src/environments/environment';
 import { SignupButtonComponent } from './shared/signup-button/signup-button.component';
 import { LogoutButtonComponent } from './shared/logout-button/logout-button.component';
 import { LoginButtonComponent } from './shared/login-button/login-button.component';
+import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
+import { PageLoaderComponent } from './shared/page-loader.component';
+import { PageLayoutComponent } from './shared/page-layout.component';
+import { HomeComponent } from './features/home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,10 @@ import { LoginButtonComponent } from './shared/login-button/login-button.compone
     SignupButtonComponent,
     LogoutButtonComponent,
     LoginButtonComponent,
+    NavBarComponent,
+    PageLoaderComponent,
+    PageLayoutComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,5 +39,9 @@ import { LoginButtonComponent } from './shared/login-button/login-button.compone
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [
+    PageLoaderComponent,
+    PageLayoutComponent
+  ],
 })
 export class AppModule {}
