@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment } from 'src/environments/environment';
+import { SignupButtonComponent } from './signup-button/signup-button.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SignupButtonComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
