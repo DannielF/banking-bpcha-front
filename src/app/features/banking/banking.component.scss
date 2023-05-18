@@ -1,10 +1,14 @@
-body {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
+.container {
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  grid-template-rows: 20rem 1fr;
+  grid-template-areas:
+    "header header"
+    "navbar main";
 }
 
 .banking-image {
+  grid-area: header;
   width: 100%;
   height: 20vh;
   border-bottom-style: solid;
@@ -17,6 +21,7 @@ body {
 }
 
 .banking-navbar {
+  grid-area: navbar;
   width: 200px;
   background-color: #f1f1f1;
   height: 80vh;
@@ -48,4 +53,8 @@ body {
 
 .banking-navbar a:hover {
   background-color: #ddd;
+}
+
+.outlet {
+  grid-area: main;
 }

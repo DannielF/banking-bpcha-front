@@ -14,6 +14,7 @@ import { PageLoaderComponent } from './shared/page-loader.component';
 import { PageLayoutComponent } from './shared/page-layout.component';
 import { HomeComponent } from './features/home/home.component';
 import { BankingComponent } from './features/banking/banking.component';
+import { ClientsComponent } from './features/clients/clients.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { BankingComponent } from './features/banking/banking.component';
     PageLayoutComponent,
     HomeComponent,
     BankingComponent,
+    ClientsComponent,
   ],
   imports: [
     BrowserModule,

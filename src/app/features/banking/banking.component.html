@@ -1,5 +1,5 @@
 <app-page-layout>
-  <body>
+  <div class="container">
     <div class="banking-image">
       <div class="">
         <img
@@ -10,13 +10,15 @@
     </div>
     <div class="banking-navbar">
       <ul>
-        <li><a routerLink="/clients" routerLinkActive="active">Clients</a></li>
-        <li><a routerLink="/accounts">Accounts</a></li>
-        <li><a routerLink="/transactions">Transactions</a></li>
-        <li><a routerLink="/reports">Reports</a></li>
+        <li><a routerLink="clients">Clients</a></li>
+        <li><a routerLink="accounts">Accounts</a></li>
+        <li><a routerLink="transactions">Transactions</a></li>
+        <li><a routerLink="reports">Reports</a></li>
       </ul>
     </div>
     <div style="margin-left: 200px; padding: 20px"></div>
-  </body>
-  <router-outlet></router-outlet>
+    <div class="outlet">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </app-page-layout>
