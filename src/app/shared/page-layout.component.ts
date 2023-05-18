@@ -24,6 +24,9 @@ import { Component } from '@angular/core';
         width: 100%;
         height: 20vh;
       }
+      .page-layout__content {
+        width: 100%;
+      }
     `,
   ],
 })

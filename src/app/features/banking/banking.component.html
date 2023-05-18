@@ -1,0 +1,22 @@
+<app-page-layout>
+  <body>
+    <div class="banking-image">
+      <div class="">
+        <img
+          src="https://www.mistercompta.com/wp-content/uploads/2020/09/pichincha-icon.png"
+          alt="bpcha icon"
+        />
+      </div>
+    </div>
+    <div class="banking-navbar">
+      <ul>
+        <li><a routerLink="/clients" routerLinkActive="active">Clients</a></li>
+        <li><a routerLink="/accounts">Accounts</a></li>
+        <li><a routerLink="/transactions">Transactions</a></li>
+        <li><a routerLink="/reports">Reports</a></li>
+      </ul>
+    </div>
+    <div style="margin-left: 200px; padding: 20px"></div>
+  </body>
+  <router-outlet></router-outlet>
+</app-page-layout>

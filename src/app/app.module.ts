@@ -13,6 +13,7 @@ import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { PageLoaderComponent } from './shared/page-loader.component';
 import { PageLayoutComponent } from './shared/page-layout.component';
 import { HomeComponent } from './features/home/home.component';
+import { BankingComponent } from './features/banking/banking.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HomeComponent } from './features/home/home.component';
     PageLoaderComponent,
     PageLayoutComponent,
     HomeComponent,
+    BankingComponent,
   ],
   imports: [
     BrowserModule,
