@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment } from 'src/environments/environment';
 import { SignupButtonComponent } from './signup-button/signup-button.component';
+import { LogoutButtonComponent } from './logout-button/logout-button.component';
 
 @NgModule({
-  declarations: [AppComponent, SignupButtonComponent],
+  declarations: [AppComponent, SignupButtonComponent, LogoutButtonComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
