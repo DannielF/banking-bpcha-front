@@ -7,6 +7,10 @@
   (input)="searchClients()"
 />
 
+<button *ngIf="!showModal" (click)="openModal()" class="button__create">
+  Create New Client
+</button>
+
 <table *ngFor="let client of filteredClients" class="client-table">
   <caption>
     Clients information
@@ -38,10 +42,6 @@
     </tr>
   </tbody>
 </table>
-
-<button *ngIf="!showModal" (click)="openModal()" class="button__create">
-  Create New Client
-</button>
 
 <div *ngIf="showModal" class="modal">
   <div class="modal-content">
