@@ -12,7 +12,7 @@ export class SignupButtonComponent {
   handleSignUp(): void {
     this.auth.loginWithRedirect({
       appState: {
-        target: '/bpcha',
+        target: '/banking/clients',
       },
       authorizationParams: {
         screen_hint: 'signup',
