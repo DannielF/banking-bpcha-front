@@ -11,7 +11,7 @@
   Create New Client
 </button>
 
-<table *ngFor="let client of filteredClients" class="client-table">
+<table class="client-table">
   <caption>
     Clients information
   </caption>
@@ -28,7 +28,7 @@
       <th>State</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngFor="let client of filteredClients">
     <tr>
       <td>{{ client.id }}</td>
       <td>{{ client.name }}</td>
