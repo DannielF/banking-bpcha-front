@@ -1,9 +1,10 @@
-<h2>Search clients</h2>
+<h1>Search clients</h1>
 <input
   class="input__search"
   type="text"
   placeholder="Search clients"
   [(ngModel)]="searchQuery"
+  (input)="searchClients()"
 />
 
 <table *ngFor="let client of filteredClients" class="client-table">
@@ -25,20 +26,22 @@
   </thead>
   <tbody>
     <tr>
-      <td>{{ newClientData.id }}</td>
-      <td>{{ newClientData.name }}</td>
-      <td>{{ newClientData.gender }}</td>
-      <td>{{ newClientData.age }}</td>
-      <td>{{ newClientData.documentId }}</td>
-      <td>{{ newClientData.address }}</td>
-      <td>{{ newClientData.phoneNumber }}</td>
-      <td>{{ newClientData.password }}</td>
-      <td>{{ newClientData.state }}</td>
+      <td>{{ client.id }}</td>
+      <td>{{ client.name }}</td>
+      <td>{{ client.gender }}</td>
+      <td>{{ client.age }}</td>
+      <td>{{ client.documentId }}</td>
+      <td>{{ client.address }}</td>
+      <td>{{ client.phoneNumber }}</td>
+      <td>{{ client.password }}</td>
+      <td>{{ client.state }}</td>
     </tr>
   </tbody>
 </table>
 
-<button (click)="openModal()" class="button__create">Create New Client</button>
+<button *ngIf="!showModal" (click)="openModal()" class="button__create">
+  Create New Client
+</button>
 
 <div *ngIf="showModal" class="modal">
   <div class="modal-content">
@@ -87,13 +90,19 @@
         <input
           type="password"
           name="password"
+          autocomplete="current-password"
           [(ngModel)]="newClientData.password"
         />
       </label>
 
       <label>
         State:
-        <input type="text" name="state" [(ngModel)]="newClientData.state" />
+        <input
+          type="text"
+          name="state"
+          autocomplete="True"
+          [(ngModel)]="newClientData.state"
+        />
       </label>
 
       <button type="button" (click)="createClient()">Create</button>

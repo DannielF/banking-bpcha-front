@@ -1,4 +1,4 @@
-h2 {
+h1 {
   margin-block: 1rem;
   margin-inline-start: 1rem;
 }
@@ -15,6 +15,7 @@ h2 {
 }
 
 .modal {
+  margin-block-start: 3rem;
   margin-inline-start: 1rem;
   form {
     display: flex;
