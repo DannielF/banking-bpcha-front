@@ -29,7 +29,6 @@ export class ClientsComponent implements OnInit {
 
   ngOnInit() {
     this.fetchClients();
-    console.log(this.fetchClients);
   }
 
   fetchClients() {

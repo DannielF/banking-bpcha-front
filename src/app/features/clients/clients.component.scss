@@ -56,6 +56,8 @@ button:disabled {
 
 .client-table {
   width: 100%;
+  margin-inline: 1rem;
+  margin-block-end: 1rem;
   border-collapse: collapse;
   th,
   td {
