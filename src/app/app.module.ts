@@ -15,6 +15,7 @@ import { PageLayoutComponent } from './shared/page-layout.component';
 import { HomeComponent } from './features/home/home.component';
 import { BankingComponent } from './features/banking/banking.component';
 import { ClientsComponent } from './features/clients/clients.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ClientsComponent } from './features/clients/clients.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     AuthModule.forRoot({
@@ -43,9 +45,6 @@ import { ClientsComponent } from './features/clients/clients.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [
-    PageLoaderComponent,
-    PageLayoutComponent
-  ],
+  exports: [PageLoaderComponent, PageLayoutComponent],
 })
 export class AppModule {}

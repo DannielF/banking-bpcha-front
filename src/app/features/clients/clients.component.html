@@ -1,0 +1,105 @@
+<h2>Search clients</h2>
+<input
+  class="input__search"
+  type="text"
+  placeholder="Search clients"
+  [(ngModel)]="searchQuery"
+/>
+
+<table *ngFor="let client of filteredClients" class="client-table">
+  <caption>
+    Clients information
+  </caption>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Document ID</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>Password</th>
+      <th>State</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ newClientData.id }}</td>
+      <td>{{ newClientData.name }}</td>
+      <td>{{ newClientData.gender }}</td>
+      <td>{{ newClientData.age }}</td>
+      <td>{{ newClientData.documentId }}</td>
+      <td>{{ newClientData.address }}</td>
+      <td>{{ newClientData.phoneNumber }}</td>
+      <td>{{ newClientData.password }}</td>
+      <td>{{ newClientData.state }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="openModal()" class="button__create">Create New Client</button>
+
+<div *ngIf="showModal" class="modal">
+  <div class="modal-content">
+    <h2>Create New Client</h2>
+    <form>
+      <label>
+        Name:
+        <input type="text" name="name" [(ngModel)]="newClientData.name" />
+      </label>
+
+      <label>
+        Gender:
+        <input type="text" name="gender" [(ngModel)]="newClientData.gender" />
+      </label>
+
+      <label>
+        Age:
+        <input type="number" name="age" [(ngModel)]="newClientData.age" />
+      </label>
+
+      <label>
+        Document ID:
+        <input
+          type="number"
+          name="documentId"
+          [(ngModel)]="newClientData.documentId"
+        />
+      </label>
+
+      <label>
+        Address:
+        <input type="text" name="address" [(ngModel)]="newClientData.address" />
+      </label>
+
+      <label>
+        Phone Number:
+        <input
+          type="number"
+          name="phoneNumber"
+          [(ngModel)]="newClientData.phoneNumber"
+        />
+      </label>
+
+      <label>
+        Password:
+        <input
+          type="password"
+          name="password"
+          [(ngModel)]="newClientData.password"
+        />
+      </label>
+
+      <label>
+        State:
+        <input type="text" name="state" [(ngModel)]="newClientData.state" />
+      </label>
+
+      <button type="button" (click)="createClient()">Create</button>
+    </form>
+  </div>
+  <button *ngIf="showModal" class="button__close-modal" (click)="openModal()">
+    Close form
+  </button>
+</div>
