@@ -44,9 +44,6 @@ export class ClientsComponent implements OnInit {
   }
 
   searchClients() {
-    console.log('this.clients :>> ', this.clients);
-    console.log(this.searchQuery);
-    console.log('this.filteredClients :>> ', this.filteredClients);
     this.filteredClients = this.clients.filter((client) =>
       client.name.toLowerCase().includes(this.searchQuery.toLowerCase())
     );
