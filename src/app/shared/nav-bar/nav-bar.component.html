@@ -1,9 +1,17 @@
 <div class="nav-bar__buttons">
+  <div class="banking-image">
+    <div class="">
+      <img
+        src="https://www.mistercompta.com/wp-content/uploads/2020/09/pichincha-icon.png"
+        alt="bpcha icon"
+      />
+    </div>
+  </div>
   <ng-container *ngIf="isAuthenticated$ | async; else unAuthenticated">
     <app-logout-button></app-logout-button>
   </ng-container>
   <ng-template #unAuthenticated>
-    <app-signup-button></app-signup-button>
-    <app-login-button></app-login-button>
+    <app-signup-button class="button__auth"></app-signup-button>
+    <app-login-button class="button__auth"></app-login-button>
   </ng-template>
 </div>

@@ -1,7 +1,22 @@
 .nav-bar__buttons {
   // nav bar with two buttons, both in the right side
   display: flex;
-  justify-content: space-evenly;
   height: 100%;
   align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #ddd;
+
+  .banking-image {
+    width: 80%;
+    height: 20vh;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .button__auth {
+    margin-inline: 1rem;
+  }
 }
